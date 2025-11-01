@@ -25,6 +25,7 @@ jobs:
         run: npm run build
       - name: setup
         run: |
+          mkdir -p builder/src
           mkdir -p builder/types
           cp -rf src/* builder/src/ 2>/dev/null || true
           cp -rf types/* builder/types/ 2>/dev/null || true
