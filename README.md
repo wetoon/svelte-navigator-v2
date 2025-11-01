@@ -1,7 +1,7 @@
-# svelte-navigator-v2-v2
+# svelte-navigator-v2
 
 > **Lightweight, type-safe router for Svelte**  
-> Community-maintained fork of [`mefechoel/svelte-navigator-v2`](https://github.com/mefechoel/svelte-navigator-v2) (last updated 2020)
+> Community-maintained fork of [`mefechoel/svelte-navigator`](https://github.com/mefechoel/svelte-navigator) (last updated 2020)
 
 Now with:
 - Svelte 5 (runes ready)
@@ -15,12 +15,12 @@ Now with:
 
 This is a **community fork**, not affiliated with the original.
 
-[![npm package](https://img.shields.io/npm/v/svelte-navigator-v2.svg?style=flat-square)](https://npmjs.com/package/svelte-navigator-v2)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/svelte-navigator-v2?style=flat-square)](https://bundlephobia.com/result?p=svelte-navigator-v2)
-[![NPM](https://img.shields.io/npm/l/svelte-navigator-v2?style=flat-square)](https://github.com/mefechoel/svelte-navigator-v2/blob/main/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/mefechoel/svelte-navigator-v2?style=flat-square)](https://github.com/mefechoel/svelte-navigator-v2/commits/main)
+[![npm package](https://img.shields.io/npm/v/svelte-navigator.svg?style=flat-square)](https://npmjs.com/package/svelte-navigator)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/svelte-navigator?style=flat-square)](https://bundlephobia.com/result?p=svelte-navigator)
+[![NPM](https://img.shields.io/npm/l/svelte-navigator?style=flat-square)](https://github.com/mefechoel/svelte-navigator/blob/main/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/mefechoel/svelte-navigator?style=flat-square)](https://github.com/mefechoel/svelte-navigator/commits/main)
 [![Code Style Prettier](https://img.shields.io/badge/code%20style-prettier-ff7fe1.svg?style=flat-square)](https://github.com/prettier/prettier#readme)
-[![Build Status](https://img.shields.io/github/workflow/status/mefechoel/svelte-navigator-v2/Test?style=flat-square)](https://github.com/mefechoel/svelte-navigator-v2/actions?query=workflow%3ATest)
+[![Build Status](https://img.shields.io/github/workflow/status/mefechoel/svelte-navigator/Test?style=flat-square)](https://github.com/mefechoel/svelte-navigator/actions?query=workflow%3ATest)
 
 > Simple, accessible routing for Svelte.
 
@@ -82,23 +82,23 @@ React-esque hooks.
 ## Getting started
 
 [example-folder-url]:
-	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example
+	https://github.com/mefechoel/svelte-navigator/tree/master/example
 [example-basic-client-side]:
-	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/basic-client-side
+	https://github.com/mefechoel/svelte-navigator/tree/master/example/basic-client-side
 [example-custom-hash-history]:
-	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/custom-hash-history
+	https://github.com/mefechoel/svelte-navigator/tree/master/example/custom-hash-history
 [example-private-routes]:
-	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/private-routes
+	https://github.com/mefechoel/svelte-navigator/tree/master/example/private-routes
 [example-private-routes-async]:
-	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/private-routes-async
+	https://github.com/mefechoel/svelte-navigator/tree/master/example/private-routes-async
 [example-lazy-loading]:
-	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/lazy-loading
+	https://github.com/mefechoel/svelte-navigator/tree/master/example/lazy-loading
 [example-ssr]:
-	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/ssr
+	https://github.com/mefechoel/svelte-navigator/tree/master/example/ssr
 [example-url-bar]:
-	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/url-bar
+	https://github.com/mefechoel/svelte-navigator/tree/master/example/url-bar
 [example-transitions]:
-	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/transitions
+	https://github.com/mefechoel/svelte-navigator/tree/master/example/transitions
 [repl-basic-client-side]:
 	https://svelte.dev/repl/451fd183e0d3403cb7800101f7d799fb
 [repl-custom-hash-history]:
