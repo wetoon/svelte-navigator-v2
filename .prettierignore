@@ -1,0 +1,13 @@
+**/public/**/*.js
+**/dist
+**/build/
+**/coverage/
+**/coverage-cypress/
+**/coverage-jest/
+**/.nyc_output
+**/.husky
+**/.vscode
+**/node_modules/
+**/tmp
+**/package.json
+**/package-lock.json

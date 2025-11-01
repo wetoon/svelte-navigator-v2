@@ -1,0 +1,44 @@
+{
+  "name": "svelte-navigator-v2",
+  "version": "2.0.0",
+  "description": "Lightweight Svelte router — community fork of mefechoel/svelte-navigator (inactive since 2020) with Svelte 5 & TypeScript support",
+  "main": "dist/svelte-navigator.umd.js",
+  "unpkg": "dist/svelte-navigator.umd.min.js",
+  "module": "dist/svelte-navigator.module.mjs",
+  "svelte": "src/index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "src",
+    "dist",
+    "types",
+    "LICENSE",
+    "README.md",
+    "svelte-navigator.css"
+  ],
+  "author": "Wetoon @wetoon (maintainer of v2 fork)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wetoon/svelte-navigator-v2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wetoon/svelte-navigator-v2/issues"
+  },
+  "homepage": "https://github.com/wetoon/svelte-navigator-v2#readme",
+  "keywords": [
+    "svelte",
+    "router",
+    "sveltekit",
+    "typescript",
+    "navigation",
+    "spa",
+    "accessibility"
+  ],
+  "sideEffects": false,
+  "private": false,
+  "original": {
+    "author": "mefechoel",
+    "repository": "https://github.com/mefechoel/svelte-navigator",
+    "note": "This is a community-maintained fork. Original project last updated in 2020."
+  }
+}
