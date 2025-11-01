@@ -1,7 +1,7 @@
-# svelte-navigator-v2
+# svelte-navigator-v2-v2
 
 > **Lightweight, type-safe router for Svelte**  
-> Community-maintained fork of [`mefechoel/svelte-navigator`](https://github.com/mefechoel/svelte-navigator) (last updated 2020)
+> Community-maintained fork of [`mefechoel/svelte-navigator-v2`](https://github.com/mefechoel/svelte-navigator-v2) (last updated 2020)
 
 Now with:
 - Svelte 5 (runes ready)
@@ -15,12 +15,12 @@ Now with:
 
 This is a **community fork**, not affiliated with the original.
 
-[![npm package](https://img.shields.io/npm/v/svelte-navigator.svg?style=flat-square)](https://npmjs.com/package/svelte-navigator)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/svelte-navigator?style=flat-square)](https://bundlephobia.com/result?p=svelte-navigator)
-[![NPM](https://img.shields.io/npm/l/svelte-navigator?style=flat-square)](https://github.com/mefechoel/svelte-navigator/blob/main/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/mefechoel/svelte-navigator?style=flat-square)](https://github.com/mefechoel/svelte-navigator/commits/main)
+[![npm package](https://img.shields.io/npm/v/svelte-navigator-v2.svg?style=flat-square)](https://npmjs.com/package/svelte-navigator-v2)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/svelte-navigator-v2?style=flat-square)](https://bundlephobia.com/result?p=svelte-navigator-v2)
+[![NPM](https://img.shields.io/npm/l/svelte-navigator-v2?style=flat-square)](https://github.com/mefechoel/svelte-navigator-v2/blob/main/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/mefechoel/svelte-navigator-v2?style=flat-square)](https://github.com/mefechoel/svelte-navigator-v2/commits/main)
 [![Code Style Prettier](https://img.shields.io/badge/code%20style-prettier-ff7fe1.svg?style=flat-square)](https://github.com/prettier/prettier#readme)
-[![Build Status](https://img.shields.io/github/workflow/status/mefechoel/svelte-navigator/Test?style=flat-square)](https://github.com/mefechoel/svelte-navigator/actions?query=workflow%3ATest)
+[![Build Status](https://img.shields.io/github/workflow/status/mefechoel/svelte-navigator-v2/Test?style=flat-square)](https://github.com/mefechoel/svelte-navigator-v2/actions?query=workflow%3ATest)
 
 > Simple, accessible routing for Svelte.
 
@@ -82,23 +82,23 @@ React-esque hooks.
 ## Getting started
 
 [example-folder-url]:
-	https://github.com/mefechoel/svelte-navigator/tree/master/example
+	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example
 [example-basic-client-side]:
-	https://github.com/mefechoel/svelte-navigator/tree/master/example/basic-client-side
+	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/basic-client-side
 [example-custom-hash-history]:
-	https://github.com/mefechoel/svelte-navigator/tree/master/example/custom-hash-history
+	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/custom-hash-history
 [example-private-routes]:
-	https://github.com/mefechoel/svelte-navigator/tree/master/example/private-routes
+	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/private-routes
 [example-private-routes-async]:
-	https://github.com/mefechoel/svelte-navigator/tree/master/example/private-routes-async
+	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/private-routes-async
 [example-lazy-loading]:
-	https://github.com/mefechoel/svelte-navigator/tree/master/example/lazy-loading
+	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/lazy-loading
 [example-ssr]:
-	https://github.com/mefechoel/svelte-navigator/tree/master/example/ssr
+	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/ssr
 [example-url-bar]:
-	https://github.com/mefechoel/svelte-navigator/tree/master/example/url-bar
+	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/url-bar
 [example-transitions]:
-	https://github.com/mefechoel/svelte-navigator/tree/master/example/transitions
+	https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/transitions
 [repl-basic-client-side]:
 	https://svelte.dev/repl/451fd183e0d3403cb7800101f7d799fb
 [repl-custom-hash-history]:
@@ -135,13 +135,19 @@ setups, or checkout the examples in the Svelte REPL:
 With `yarn`:
 
 ```bash
-yarn add svelte-navigator
+yarn add svelte-navigator-v2
+```
+
+With `bun`:
+
+```bash
+bun add svelte-navigator-v2
 ```
 
 With `npm`:
 
 ```bash
-npm install --save svelte-navigator
+npm install --save svelte-navigator-v2
 ```
 
 ## Usage
@@ -151,7 +157,7 @@ Basic Setup for a client-side SPA:
 ```html
 <!-- App.svelte -->
 <script>
-	import { Router, Link, Route } from "svelte-navigator";
+	import { Router, Link, Route } from "svelte-navigator-v2";
 	import Home from "./routes/Home.svelte";
 	import About from "./routes/About.svelte";
 	import Blog from "./routes/Blog.svelte";
@@ -205,11 +211,11 @@ from the most specific to the least specific if you are using SSR**.
 
 ## FAQ
 
-### I'm using Vite. Why am I getting errors with `svelte-navigator`?
+### I'm using Vite. Why am I getting errors with `svelte-navigator-v2`?
 
 Vite tries to optimize the dependencies of your app. Unfortunately, this process
-can break `svelte-navigator`, because it creates two versions of a variable,
-`svelte-navigator` uses internally. To fix this update your `vite.config.js` (or
+can break `svelte-navigator-v2`, because it creates two versions of a variable,
+`svelte-navigator-v2` uses internally. To fix this update your `vite.config.js` (or
 `vite.config.ts`) file:
 
 ```js
@@ -221,13 +227,13 @@ export default defineConfig({
 	// ... your config ...
 	plugins: [svelte() /* ... your plugins ... */],
 	// Add this line:
-	optimizeDeps: { exclude: ["svelte-navigator"] },
+	optimizeDeps: { exclude: ["svelte-navigator-v2"] },
 });
 ```
 
-### I'm coming from `svelte-routing`. How can I switch to `svelte-navigator`?
+### I'm coming from `svelte-routing`. How can I switch to `svelte-navigator-v2`?
 
-`svelte-navigator` started as a fork of
+`svelte-navigator-v2` started as a fork of
 [`svelte-routing`](https://github.com/EmilTholin/svelte-routing). Its API is
 largely identical. Svelte Navigator mainly adds functionality through hooks.
 Things that work in Svelte Routing should just work in Svelte Navigator as well.
@@ -237,7 +243,7 @@ Switching libraries is as easy as updating your imports:
 // Change your imports from
 import { Router, Route /* , ... */ } from "svelte-routing";
 // to
-import { Router, Route /* , ... */ } from "svelte-navigator";
+import { Router, Route /* , ... */ } from "svelte-navigator-v2";
 ```
 
 Enjoy added functionality, like access to the current location or params through
@@ -322,7 +328,7 @@ has its limitations though, see [`link` section in the API docs](#link-1)).
 
 ```html
 <script>
-	import { link } from "svelte-navigator";
+	import { link } from "svelte-navigator-v2";
 </script>
 
 <style>
@@ -376,7 +382,7 @@ import { render } from "@testing-library/svelte";
 import WrapRouter from "./WrapRouter.svelte";
 
 /**
- * Test-render a component, that relies on some of svelte-navigator's
+ * Test-render a component, that relies on some of svelte-navigator-v2's
  * features, inside a Router.
  *
  * @param component The component you want to wrap in a Router
@@ -400,7 +406,7 @@ export default renderWithRouter;
 		Route,
 		createMemorySource,
 		createHistory,
-	} from "svelte-navigator";
+	} from "svelte-navigator-v2";
 
 	/** The component you want to wrap in a Router */
 	export let component;
@@ -414,7 +420,7 @@ export default renderWithRouter;
 	export let onNavigate = () => {};
 	/**
 	 * If true, the component will be wrapped in a Route component as well.
-	 * Some features of svelte-navigator can only be used inside a Route,
+	 * Some features of svelte-navigator-v2 can only be used inside a Route,
 	 * for example `useParams`.
 	 */
 	export let withRoute = false;
@@ -530,7 +536,7 @@ implementing Svelte Navigators focus management.
 ```html
 <!-- App.svelte -->
 <script>
-	import { Router, Route, Link } from "svelte-navigator";
+	import { Router, Route, Link } from "svelte-navigator-v2";
 
 	// Provide a custom message when navigating using
 	// a routes `meta` information
@@ -555,7 +561,7 @@ implementing Svelte Navigators focus management.
 
 <!-- Blog.svelte -->
 <script>
-	import { Route, Link, useFocus } from "svelte-navigator";
+	import { Route, Link, useFocus } from "svelte-navigator-v2";
 
 	// Provide a custom element to focus when this Route is navigated to
 	const registerFocus = useFocus();
@@ -626,7 +632,7 @@ history][example-custom-hash-history]).
 
 ```html
 <script>
-	import { createHistory, createMemorySource } from "svelte-navigator";
+	import { createHistory, createMemorySource } from "svelte-navigator-v2";
 
 	const memoryHistory = createHistory(createMemorySource());
 </script>
@@ -637,17 +643,17 @@ history][example-custom-hash-history]).
 ```
 
 If you have a strict Content Security Policy, inline styles might be forbidden.
-Svelte-Navigator makes some use of inline styles though for internal marker
+svelte-navigator-v2 makes some use of inline styles though for internal marker
 elements and for screen reader announcements. If that is the case, you can
 disable inline styles, though you need to import those styles manually. If you
 have a bundler set up, that will be as easy as adding one import statement to
 your applications entry point. Otherwise, you might need to copy the contents of
-[`svelte-navigator.css`](https://github.com/mefechoel/svelte-navigator/blob/main/svelte-navigator.css)
+[`svelte-navigator-v2.css`](https://github.com/mefechoel/svelte-navigator-v2/blob/main/svelte-navigator-v2.css)
 into your applications css.
 
 ```js
 // In your applications entrypoint, such as `index.js` or `main.js`
-import "svelte-navigator/svelte-navigator.css";
+import "svelte-navigator-v2/svelte-navigator-v2.css";
 ```
 
 ###### Properties
@@ -661,7 +667,7 @@ import "svelte-navigator/svelte-navigator.css";
 |          `a11y`           |       `object`       |                                        | Configuration object for Svelte Navigators accessibility features                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `a11y.createAnnouncement` | `CreateAnnouncement` | `route => 'Navigated to ${route.uri}'` | Function to create an announcement message, that is read by screen readers on navigation. It takes the matched `Route` and the current `location` as arguments and returns a `string` or a `Promise`, that resolves to a `string`.                                                                                                                                                                                                                                                                                                        |
 |   `a11y.announcements`    |      `boolean`       |                 `true`                 | Set it to false, to disable screen reader announcements                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-|   `disableInlineStyles`   |      `boolean`       |                `false`                 | Disable the inline styles, that are used internally by svelte-navigator. This might be necessary when your Content Security Policy disallows inline styles. To still remain functional, be sure to include the [`svelte-navigator.css`](https://github.com/mefechoel/svelte-navigator/blob/main/svelte-navigator.css) in your application.                                                                                                                                                                                                |
+|   `disableInlineStyles`   |      `boolean`       |                `false`                 | Disable the inline styles, that are used internally by svelte-navigator-v2. This might be necessary when your Content Security Policy disallows inline styles. To still remain functional, be sure to include the [`svelte-navigator-v2.css`](https://github.com/mefechoel/svelte-navigator-v2/blob/main/svelte-navigator-v2.css) in your application.                                                                                                                                                                                                |
 
 Where:
 
@@ -729,7 +735,7 @@ resolve the `to` path relative to the current `Route` and to the `Router`s
 |    `to`    | `string` ️ |               | URL the component should link to. It will be resolved relative to the current Route.                                                                                                                                                                                                                                                                                                                                                                                   |
 | `replace`  | `boolean`  |    `false`    | When `true`, clicking the `Link` will replace the current entry in the history stack instead of adding a new one.                                                                                                                                                                                                                                                                                                                                                      |
 |  `state`   |  `object`  |     `{}`      | An object that will be pushed to the history stack when the `Link` is clicked. A state is arbitrary data, that you don't want to communicate through the url, much like the body of a HTTP POST request.                                                                                                                                                                                                                                                               |
-| `getProps` | `GetProps` |    `null`     | A function that returns an object that will be spread on the underlying anchor element's attributes. The first argument given to the function is an object with the properties `location`, `href`, `isPartiallyCurrent`, `isCurrent`. Look at the [`NavLink` component in the example project setup](https://github.com/mefechoel/svelte-navigator/tree/master/example/ssr/src/components/NavLink.svelte) to see how you can build your own link components with this. |
+| `getProps` | `GetProps` |    `null`     | A function that returns an object that will be spread on the underlying anchor element's attributes. The first argument given to the function is an object with the properties `location`, `href`, `isPartiallyCurrent`, `isCurrent`. Look at the [`NavLink` component in the example project setup](https://github.com/mefechoel/svelte-navigator-v2/tree/master/example/ssr/src/components/NavLink.svelte) to see how you can build your own link components with this. |
 
 Where:
 
@@ -817,7 +823,7 @@ function the the parent `Router`.
 
 ```html
 <script>
-	import { Router, Route, Link } from "svelte-navigator";
+	import { Router, Route, Link } from "svelte-navigator-v2";
 
 	// Provide a custom message when navigating using
 	// a routes `meta` information
@@ -867,7 +873,7 @@ automatically resolve the given link relative to the current Route.
 ```html
 <!-- App.svelte -->
 <script>
-	import { Router, Route } from "svelte-navigator";
+	import { Router, Route } from "svelte-navigator-v2";
 	import RouteComponent from "./RouteComponent.svelte";
 </script>
 
@@ -880,7 +886,7 @@ automatically resolve the given link relative to the current Route.
 
 <!-- RouteComponent.svelte -->
 <script>
-	import { useNavigate } from "svelte-navigator";
+	import { useNavigate } from "svelte-navigator-v2";
 
 	const navigate = useNavigate();
 </script>
@@ -906,7 +912,7 @@ It will also resolve a link against the `basepath` of the Router
 
 <!-- RouteComponent.svelte -->
 <script>
-	import { useNavigate } from "svelte-navigator";
+	import { useNavigate } from "svelte-navigator-v2";
 
 	const navigate = useNavigate();
 </script>
@@ -949,7 +955,7 @@ it easily in deeply nested components.
 
 <!-- RouteC.svelte -->
 <script>
-	import { useNavigate } from "svelte-navigator";
+	import { useNavigate } from "svelte-navigator-v2";
 	const navigate = useNavigate();
 </script>
 ```
@@ -974,7 +980,7 @@ location.
 ```html
 <!-- RouteComponent.svelte -->
 <script>
-	import { useLocation } from "svelte-navigator";
+	import { useLocation } from "svelte-navigator-v2";
 
 	const location = useLocation();
 
@@ -999,7 +1005,7 @@ it to manually resolve links, when using the `link` or `links` actions. (See
 
 ```html
 <script>
-	import { link, useResolve } from "svelte-navigator";
+	import { link, useResolve } from "svelte-navigator-v2";
 
 	export let path;
 
@@ -1019,7 +1025,7 @@ by passing `$location` as a second argument to `resolve`:
 
 ```html
 <script>
-	import { link, useResolve, useLocation } from "svelte-navigator";
+	import { link, useResolve, useLocation } from "svelte-navigator-v2";
 
 	export let path;
 
@@ -1046,7 +1052,7 @@ You can use `useResolvable` to manually resolve links, when using the `link` or
 
 ```html
 <script>
-	import { link, useResolvable } from "svelte-navigator";
+	import { link, useResolvable } from "svelte-navigator-v2";
 
 	// `resolvedLink` will be resolved relative to its parent Route
 	// and the Router `basepath`
@@ -1064,7 +1070,7 @@ changes.
 
 ```html
 <script>
-	import { useMatch } from "svelte-navigator";
+	import { useMatch } from "svelte-navigator-v2";
 
 	const relativeMatch = useMatch("relative/path/:to/*somewhere");
 	const absoluteMatch = useMatch("/absolute/path/:to/*somewhere");
@@ -1084,7 +1090,7 @@ Access the parent Routes matched params and wildcards via a readable store.
 	with a current url of "/myApp/user/123/pauls-profile"
 -->
 <script>
-	import { useParams } from "svelte-navigator";
+	import { useParams } from "svelte-navigator-v2";
 
 	const params = useParams();
 
@@ -1102,7 +1108,7 @@ the `registerFocus` action you can apply to an element via the `use` directive:
 ```html
 <!-- Somewhere inside a Route -->
 <script>
-	import { useFocus } from "svelte-navigator";
+	import { useFocus } from "svelte-navigator-v2";
 
 	const registerFocus = useFocus();
 </script>
@@ -1117,7 +1123,7 @@ You can also use `registerFocus` asynchronously:
 <!-- Somewhere inside a Route -->
 <script>
 	import { onMount } from "svelte";
-	import { useFocus } from "svelte-navigator";
+	import { useFocus } from "svelte-navigator-v2";
 
 	const registerFocus = useFocus();
 
@@ -1151,7 +1157,7 @@ current loading process.
 <!-- Somewhere inside a Route -->
 <script>
 	import { onMount } from "svelte";
-	import { useFocus } from "svelte-navigator";
+	import { useFocus } from "svelte-navigator-v2";
 	import BlogPost from "./BlogPost.svelte";
 
 	const registerFocus = useFocus();
@@ -1211,7 +1217,7 @@ automatically resolve relative links. You might prefer `useNavigate` instead.
 
 ```html
 <script>
-	import { navigate } from "svelte-navigator";
+	import { navigate } from "svelte-navigator-v2";
 
 	function onSubmit() {
 		login().then(() => {
@@ -1227,7 +1233,7 @@ functionality).
 
 ```html
 <script>
-	import { navigate } from "svelte-navigator";
+	import { navigate } from "svelte-navigator-v2";
 </script>
 
 <button on:click="{() => navigate(-1)}">Back</button>
@@ -1257,7 +1263,7 @@ adding a new one.
 ```html
 <!-- App.svelte -->
 <script>
-	import { link, Route, Router } from "svelte-navigator";
+	import { link, Route, Router } from "svelte-navigator-v2";
 	import RouteComponent from "./RouteComponent.svelte";
 </script>
 
@@ -1276,7 +1282,7 @@ link manually.
 
 ```html
 <script>
-	import { link, useResolve } from "svelte-navigator";
+	import { link, useResolve } from "svelte-navigator-v2";
 
 	const resolve = useResolve();
 	// `resolvedLink` will be "/route1/relativePath"
@@ -1301,7 +1307,7 @@ a custom `navigate` function to the action.
 		Router,
 		createHistory,
 		createMemorySource,
-	} from "svelte-navigator";
+	} from "svelte-navigator-v2";
 
 	const memoryHistory = createHistory(createMemorySource());
 	const { navigate } = memoryHistory;
@@ -1328,7 +1334,7 @@ it to use the native browser action.
 ```html
 <!-- App.svelte -->
 <script>
-	import { links, Router } from "svelte-navigator";
+	import { links, Router } from "svelte-navigator-v2";
 </script>
 
 <div use:links>
@@ -1363,7 +1369,7 @@ different history for each one.
 
 ```html
 <script>
-	import { Router, createHistory, createMemorySource } from "svelte-navigator";
+	import { Router, createHistory, createMemorySource } from "svelte-navigator-v2";
 
 	const html5History = createHistory(window);
 	const memoryHistory = createHistory(createMemorySource());
