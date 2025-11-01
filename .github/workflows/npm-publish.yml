@@ -1,0 +1,37 @@
+name: Publish Library
+permissions:
+  id-token: write
+on:
+  release:
+    types: [ published ]
+defaults:
+  run:
+    shell: bash
+jobs:
+  publish:
+    name: 'Publish: svelte-navigator-v2 registry'
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: install dependencies
+        run: npm install
+      - name: build project
+        run: npm run build
+      - name: setup
+        run: |
+          mkdir -p builder/types
+          cp -rf src/* builder/src/ 2>/dev/null || true
+          cp -rf types/* builder/types/ 2>/dev/null || true
+          cp -f svelte-navigator.css builder/ 2>/dev/null || echo "ไม่พบ svelte-navigator.css"
+          cp -f LICENSE builder/ 2>/dev/null || echo "ไม่พบ LICENSE"
+          cp -f README.md builder/ 2>/dev/null || echo "ไม่พบ README.md"
+      - name: publish registry
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: cd builder && npm publish --provenance --access=public
